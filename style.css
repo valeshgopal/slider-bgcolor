@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(128, 128, 128);
+  overflow: hidden;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.slider-container {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  display: block;
+  width: 256px;
+  height: 8px;
+  background-color: rgba(128, 128, 128, 0.15);
+
+  border-radius: 24px;
+}
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: #fff;
+  margin-top: -4px;
+  border: 0;
+}
+
+.slider::-moz-range-progress {
+  border-radius: 24px;
+}
+
+.redslider::-moz-range-progress {
+  height: 8px;
+  background-color: red;
+}
+
+.greenslider::-moz-range-progress {
+  height: 8px;
+
+  background-color: green;
+}
+
+.blueslider::-moz-range-progress {
+  height: 8px;
+
+  background-color: blue;
+}
+
+.color-input {
+  width: 45px;
+}
+
+.hexvalue {
+  border: 0;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.clipboard {
+  opacity: 0;
+  transition: opacity 0.2s;
+}

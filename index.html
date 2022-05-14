@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Custom Range Slider</title>
+  </head>
+  <body>
+    <p style="font-weight: 600; color: #fff">
+      Move Sliders to Change Background Color
+    </p>
+    <div class="container">
+      <div class="slider-container">
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="128"
+          steps="1"
+          class="redslider slider"
+        />
+        R<input type="number" value="128" class="color-input red-input" />
+      </div>
+      <div class="slider-container">
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="128"
+          steps="1"
+          class="greenslider slider"
+        />
+        G<input type="number" value="128" class="color-input green-input" />
+      </div>
+      <div class="slider-container">
+        <input
+          type="range"
+          min="0"
+          max="255"
+          value="128"
+          steps="1"
+          class="blueslider slider"
+        />
+        B<input type="number" value="128" class="color-input blue-input" />
+      </div>
+    </div>
+    <div>
+      <p class="hexvalue"></p>
+    </div>
+    <div class="clipboard">Copied!</div>
+  </body>
+  <script src="script.js"></script>
+</html>
