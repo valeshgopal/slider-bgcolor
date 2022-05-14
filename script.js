@@ -7,6 +7,7 @@ const sliders = document.querySelectorAll(".slider");
 const redInput = document.querySelector(".red-input");
 const greenInput = document.querySelector(".green-input");
 const blueInput = document.querySelector(".blue-input");
+const colorInputs = document.querySelectorAll(".color-input");
 
 const hexValue = document.querySelector(".hexvalue");
 const clipboard = document.querySelector(".clipboard");
@@ -46,6 +47,17 @@ function ConvertRGBtoHex(red, green, blue) {
 
 sliders.forEach((slider) => {
   slider.addEventListener("input", () => {
+    document.body.style.backgroundColor = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`;
+    hexValue.innerText = ConvertRGBtoHex(
+      +redSlider.value,
+      +greenSlider.value,
+      +blueSlider.value
+    );
+  });
+});
+
+colorInputs.forEach((colorInput) => {
+  colorInput.addEventListener("input", () => {
     document.body.style.backgroundColor = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`;
     hexValue.innerText = ConvertRGBtoHex(
       +redSlider.value,
